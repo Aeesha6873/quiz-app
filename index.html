@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js" defer></script>
   </head>
   <body>
     <div class="quiz-container">
@@ -18,11 +18,385 @@
         <button class="quiz-btn css">CSS</button>
         <button class="quiz-btn js">JavaScript</button>
       </div>
-
-      <div class="theme-toggle">
-        <input type="checkbox" id="toggle" />
-        <label for="toggle"></label>
-      </div>
     </div>
+
+    <!-- Template for HTML Quiz -->
+    <template class="html-quiz-template">
+      <form action="" id="quiz-form" class="quiz-container question-container">
+        <ol>
+          <li class="question-item">
+            <div class="question">
+              <p>Question 1 of 10</p>
+              <h4>
+                Which of the following HTML elements is used to define the most
+                important heading on a webpage?
+              </h4>
+              <!-- <button type="button" class="quiz-btn submit">Next</button> -->
+            </div>
+            <ol class="quiz-answers">
+              <label>
+                <input
+                  type="radio"
+                  class="answer"
+                  name="answer-1"
+                  value="false" />
+                <code>&lt;h6&gt;</code>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  class="answer"
+                  name="answer-1"
+                  value="true" />
+                <code>&lt;h1&gt;</code>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  class="answer"
+                  name="answer-1"
+                  value="false" />
+                <code>&lt;header&gt;</code>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  class="answer"
+                  name="answer-1"
+                  value="false" />
+                <code>&lt;title&gt;</code>
+              </label>
+            </ol>
+          </li>
+        </ol>
+        <ol>
+          <li class="question-item">
+            <div class="question">
+              <p>Question 2 of 10</p>
+              <h4>
+                Which of the following HTML elements is used to define the most
+                important heading on a webpage?
+              </h4>
+              <!-- <button type="button" class="quiz-btn submit">Next</button> -->
+            </div>
+            <ol class="quiz-answers">
+              <label>
+                <input
+                  type="radio"
+                  class="answer"
+                  name="answer-1"
+                  value="false" />
+                <code>&lt;h6&gt;</code>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  class="answer"
+                  name="answer-1"
+                  value="true" />
+                <code>&lt;h1&gt;</code>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  class="answer"
+                  name="answer-1"
+                  value="false" />
+                <code>&lt;header&gt;</code>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  class="answer"
+                  name="answer-1"
+                  value="false" />
+                <code>&lt;title&gt;</code>
+              </label>
+            </ol>
+          </li>
+        </ol>
+        <ol>
+          <li class="question-item">
+            <div class="question">
+              <p>Question 3 of 10</p>
+              <h4>
+                Which of the following HTML elements is used to define the most
+                important heading on a webpage?
+              </h4>
+            </div>
+            <ol class="quiz-answers">
+              <label>
+                <input
+                  type="radio"
+                  class="answer"
+                  name="answer-1"
+                  value="false" />
+                <code>&lt;h6&gt;</code>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  class="answer"
+                  name="answer-1"
+                  value="false" />
+                <code>&lt;h1&gt;</code>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  class="answer"
+                  name="answer-1"
+                  value="false" />
+                <code>&lt;header&gt;</code>
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  class="answer"
+                  name="answer-1"
+                  value="true" />
+                <code>&lt;title&gt;</code>
+              </label>
+            </ol>
+          </li>
+        </ol>
+
+        <button type="submit">Check</button>
+      </form>
+    </template>
+
+    <!-- Template for the CSS Quiz -->
+    <template class="css-quiz-template">
+      <div class="quiz-container question-container">
+        <div class="question">
+          <p>Question 1 of 10</p>
+          <h4>
+            Which of the following HTML elements is used to define the most
+            important heading on a webpage?
+          </h4>
+          <button type="submit" class="quiz-btn submit">Submit</button>
+        </div>
+        <div class="quiz-options">
+          <button class="quiz-btn">&lt;h6&gt;</button>
+          <button class="quiz-btn">&lt;h1&gt;</button>
+          <button class="quiz-btn">&lt;header&gt;</button>
+          <button class="quiz-btn">&lt;title&gt;</button>
+        </div>
+      </div>
+    </template>
+
+    <!-- Template for the JS Quiz -->
+    <template class="javascript-quiz-template">
+      <div id="alert">
+        <div class="alert-title">Congratulations !!</div>
+        You got them all right!
+      </div>
+
+      <form class="form" id="quiz-form">
+        <ol>
+          <li class="question-item">
+            <div>
+              What does this code return? (<code>0 || '' || false || "Hi"</code
+              >)
+            </div>
+            <ol>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-1"
+                    value="false" />
+                  <code>0</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-1"
+                    value="true" />
+                  <code>"Hi"</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    class="answer"
+                    type="radio"
+                    name="answer-1"
+                    value="false" />
+                  <code>false</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-1"
+                    value="false" />
+                  <code>' '</code>
+                </label>
+              </li>
+            </ol>
+          </li>
+
+          <li class="question-item">
+            <div>What is it called when a function calls itself?</div>
+            <ol>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-2"
+                    value="false" />
+                  <code>Inception</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-2"
+                    value="false" />
+                  <code>Self-Referential</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-2"
+                    value="true" />
+                  <code>Recursion</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-2"
+                    value="false" />
+                  <code>Who Cares</code>
+                </label>
+              </li>
+            </ol>
+          </li>
+
+          <li class="question-item">
+            <div>
+              How do you access the value of the data-count data attribute in
+              JavaScript?
+            </div>
+            <ol>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-3"
+                    value="false" />
+                  <code>element.dataset.count</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-3"
+                    value="false" />
+                  <code>element.dataAttribute.count</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-3"
+                    value="true" />
+                  <code>element.dataset.count</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-3"
+                    value="false" />
+                  <code>element.dataCount</code>
+                </label>
+              </li>
+            </ol>
+          </li>
+          <li class="question-item">
+            <div>
+              How do you access the value of the data-count data attribute in
+              JavaScript?
+            </div>
+            <ol>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-4"
+                    value="false" />
+                  <code>element.dataset.count</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-4"
+                    value="false" />
+                  <code>element.dataAttribute.count</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-4"
+                    value="true" />
+                  <code>element.dataset.count</code>
+                </label>
+              </li>
+              <li class="answer-item">
+                <label>
+                  <input
+                    type="radio"
+                    class="answer"
+                    name="answer-4"
+                    value="false" />
+                  <code>element.dataCount</code>
+                </label>
+              </li>
+            </ol>
+          </li>
+        </ol>
+        <button type="submit">Check</button>
+      </form>
+    </template>
   </body>
 </html>
