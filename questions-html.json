@@ -1,0 +1,92 @@
+[
+  {
+    "question": "What does HTML stand for?",
+    "answers": [
+      { "text": "Hyper Text Markup Language", "correct": true },
+      { "text": "Hyperlinks and Text Markup Language", "correct": false },
+      { "text": "Home Tool Markup Language", "correct": false },
+      { "text": "Hyper Text Main Language", "correct": false }
+    ]
+  },
+  {
+    "question": "Which HTML tag is used to define a hyperlink?",
+    "answers": [
+      { "text": "&lt;a&gt;", "correct": true },
+      { "text": "&lt;link&gt;", "correct": false },
+      { "text": "&lt;href&gt;", "correct": false },
+      { "text": "&lt;url&gt;", "correct": false }
+    ]
+  },
+  {
+    "question": "Which attribute is used to specify an alternative text for an image?",
+    "answers": [
+      { "text": "alt", "correct": true },
+      { "text": "title", "correct": false },
+      { "text": "src", "correct": false },
+      { "text": "description", "correct": false }
+    ]
+  },
+  {
+    "question": "Which HTML tag is used to create an ordered list?",
+    "answers": [
+      { "text": "&lt;ol&gt;", "correct": true },
+      { "text": "&lt;ul&gt;", "correct": false },
+      { "text": "&lt;list&gt;", "correct": false },
+      { "text": "&lt;li&gt;", "correct": false }
+    ]
+  },
+  {
+    "question": "Which tag is used to create a table in HTML?",
+    "answers": [
+      { "text": "&lt;table&gt;", "correct": true },
+      { "text": "&lt;tbl&gt;", "correct": false },
+      { "text": "&lt;tr&gt;", "correct": false },
+      { "text": "&lt;td&gt;", "correct": false }
+    ]
+  },
+  {
+    "question": "What is the correct HTML tag for inserting a line break?",
+    "answers": [
+      { "text": "&lt;br&gt;", "correct": true },
+      { "text": "&lt;lb&gt;", "correct": false },
+      { "text": "&lt;break&gt;", "correct": false },
+      { "text": "&lt;newline&gt;", "correct": false }
+    ]
+  },
+  {
+    "question": "Which HTML tag is used for the largest heading?",
+    "answers": [
+      { "text": "&lt;h1&gt;", "correct": true },
+      { "text": "&lt;h6&gt;", "correct": false },
+      { "text": "&lt;head&gt;", "correct": false },
+      { "text": "&lt;heading&gt;", "correct": false }
+    ]
+  },
+  {
+    "question": "Which HTML element is used to specify a footer for a document or section?",
+    "answers": [
+      { "text": "&lt;footer&gt;", "correct": true },
+      { "text": "&lt;bottom&gt;", "correct": false },
+      { "text": "&lt;foot&gt;", "correct": false },
+      { "text": "&lt;section&gt;", "correct": false }
+    ]
+  },
+  {
+    "question": "Which HTML attribute is used to define inline styles?",
+    "answers": [
+      { "text": "style", "correct": true },
+      { "text": "class", "correct": false },
+      { "text": "id", "correct": false },
+      { "text": "font", "correct": false }
+    ]
+  },
+  {
+    "question": "Which HTML tag is used to define important text?",
+    "answers": [
+      { "text": "&lt;strong&gt;", "correct": true },
+      { "text": "&lt;important&gt;", "correct": false },
+      { "text": "&lt;bold&gt;", "correct": false },
+      { "text": "&lt;b&gt;", "correct": false }
+    ]
+  }
+]

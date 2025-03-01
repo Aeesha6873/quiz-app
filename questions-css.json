@@ -1,0 +1,92 @@
+[
+  {
+    "question": "What does CSS stand for?",
+    "answers": [
+      { "text": "Cascading Style Sheets", "correct": true },
+      { "text": "Creative Style System", "correct": false },
+      { "text": "Computer Style Sheets", "correct": false },
+      { "text": "Colorful Style Sheets", "correct": false }
+    ]
+  },
+  {
+    "question": "Which property is used to change the background color in CSS?",
+    "answers": [
+      { "text": "background-color", "correct": true },
+      { "text": "color", "correct": false },
+      { "text": "bgcolor", "correct": false },
+      { "text": "background-style", "correct": false }
+    ]
+  },
+  {
+    "question": "Which CSS property controls the text size?",
+    "answers": [
+      { "text": "font-size", "correct": true },
+      { "text": "text-size", "correct": false },
+      { "text": "size", "correct": false },
+      { "text": "font-style", "correct": false }
+    ]
+  },
+  {
+    "question": "Which is the correct CSS syntax to make all paragraph text red?",
+    "answers": [
+      { "text": "p { color: red; }", "correct": true },
+      { "text": "{ p: color = red; }", "correct": false },
+      { "text": "p { text-color: red; }", "correct": false },
+      { "text": "p: color(red);", "correct": false }
+    ]
+  },
+  {
+    "question": "Which CSS property is used to change the font of an element?",
+    "answers": [
+      { "text": "font-family", "correct": true },
+      { "text": "font-style", "correct": false },
+      { "text": "text-font", "correct": false },
+      { "text": "font-type", "correct": false }
+    ]
+  },
+  {
+    "question": "How do you make text bold using CSS?",
+    "answers": [
+      { "text": "font-weight: bold;", "correct": true },
+      { "text": "text-weight: bold;", "correct": false },
+      { "text": "bold: true;", "correct": false },
+      { "text": "font-bold: yes;", "correct": false }
+    ]
+  },
+  {
+    "question": "Which CSS property is used to create space between elements?",
+    "answers": [
+      { "text": "margin", "correct": true },
+      { "text": "padding", "correct": false },
+      { "text": "spacing", "correct": false },
+      { "text": "border-spacing", "correct": false }
+    ]
+  },
+  {
+    "question": "How do you select an element with the ID 'header' in CSS?",
+    "answers": [
+      { "text": "#header", "correct": true },
+      { "text": ".header", "correct": false },
+      { "text": "header", "correct": false },
+      { "text": "*header", "correct": false }
+    ]
+  },
+  {
+    "question": "Which property is used to make a website responsive?",
+    "answers": [
+      { "text": "media queries", "correct": true },
+      { "text": "grid-layout", "correct": false },
+      { "text": "flexbox", "correct": false },
+      { "text": "responsive-mode", "correct": false }
+    ]
+  },
+  {
+    "question": "Which property is used to add shadow to text in CSS?",
+    "answers": [
+      { "text": "text-shadow", "correct": true },
+      { "text": "font-shadow", "correct": false },
+      { "text": "shadow-text", "correct": false },
+      { "text": "text-effect", "correct": false }
+    ]
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "question": "What is JavaScript primarily used for?",
+    "answers": [
+      { "text": "Styling web pages", "correct": false },
+      { "text": "Adding interactivity to web pages", "correct": true },
+      { "text": "Managing databases", "correct": false },
+      { "text": "Compiling programs", "correct": false }
+    ]
+  },
+  {
+    "question": "Which keyword is used to declare a variable in JavaScript?",
+    "answers": [
+      { "text": "var", "correct": false },
+      { "text": "let", "correct": false },
+      { "text": "const", "correct": false },
+      { "text": "All of the above", "correct": true }
+    ]
+  },
+  {
+    "question": "How do you write a comment in JavaScript?",
+    "answers": [
+      { "text": "// This is a comment", "correct": true },
+      { "text": "/* This is a comment */", "correct": false },
+      { "text": "<!-- This is a comment -->", "correct": false },
+      { "text": "# This is a comment", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following is NOT a JavaScript data type?",
+    "answers": [
+      { "text": "String", "correct": false },
+      { "text": "Boolean", "correct": false },
+      { "text": "Integer", "correct": true },
+      { "text": "Undefined", "correct": false }
+    ]
+  },
+  {
+    "question": "What is the correct way to write an array in JavaScript?",
+    "answers": [
+      { "text": "let colors = 'red', 'blue', 'green';", "correct": false },
+      { "text": "let colors = ['red', 'blue', 'green'];", "correct": true },
+      { "text": "let colors = (red, blue, green);", "correct": false },
+      { "text": "let colors = {red, blue, green};", "correct": false }
+    ]
+  },
+  {
+    "question": "What does 'NaN' stand for in JavaScript?",
+    "answers": [
+      { "text": "Not a Number", "correct": true },
+      { "text": "New and Null", "correct": false },
+      { "text": "Next available Node", "correct": false },
+      { "text": "None of the above", "correct": false }
+    ]
+  },
+  {
+    "question": "Which operator is used for strict equality in JavaScript?",
+    "answers": [
+      { "text": "==", "correct": false },
+      { "text": "===", "correct": true },
+      { "text": "!=", "correct": false },
+      { "text": "!==", "correct": false }
+    ]
+  },
+  {
+    "question": "Which method is used to add an element at the end of an array?",
+    "answers": [
+      { "text": "push()", "correct": true },
+      { "text": "pop()", "correct": false },
+      { "text": "shift()", "correct": false },
+      { "text": "unshift()", "correct": false }
+    ]
+  },
+  {
+    "question": "What is the correct way to write an 'if' statement in JavaScript?",
+    "answers": [
+      { "text": "if i = 5 then", "correct": false },
+      { "text": "if (i == 5)", "correct": true },
+      { "text": "if i == 5", "correct": false },
+      { "text": "if i = 5 then {}", "correct": false }
+    ]
+  },
+  {
+    "question": "What will `console.log(typeof [])` output?",
+    "answers": [
+      { "text": "'array'", "correct": false },
+      { "text": "'object'", "correct": true },
+      { "text": "'undefined'", "correct": false },
+      { "text": "'null'", "correct": false }
+    ]
+  }
+]
