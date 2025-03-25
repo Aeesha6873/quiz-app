@@ -2,72 +2,54 @@ let currentQuestionIndex = 0;
 let score = 0;
 let questions = [];
 
-const quizContainers = document.querySelector(".quiz-containers");
-const quizContainer = document.querySelector(".quiz-container");
-const quizButtons = document.querySelectorAll(".quiz-btn");
-const questionText = document.getElementById("question-text");
-const answersContainer = document.getElementById("answers");
-const nextBtn = document.getElementById("next-btn");
-const resultContainer = document.getElementById("result-container");
-const resultMessage = document.getElementById("result-message");
+const quizContainersEl = document.querySelector(".quiz-containers");
+const quizContainerEl = document.querySelector(".quiz-container");
+const quizButtonsEl = document.querySelectorAll(".quiz-btn");
+const questionTextEl = document.querySelector("#question-text");
+const answersContainerEl = document.querySelector("#answers");
+const nextBtnEl = document.querySelector("#next-btn");
+const resultContainerEl = document.querySelector("#result-container");
+const resultMessageEl = document.querySelector("#result-message");
 
-// Hide quiz and result sections initially
-quizContainer.style.display = "none";
-resultContainer.style.display = "none";
+quizContainerEl.style.display = "none";
+resultContainerEl.style.display = "none";
 
-// Show quiz interface when a subject is selected
-quizButtons.forEach((button) => {
+quizButtonsEl.forEach((button) => {
   button.addEventListener("click", () => {
-    const subject = button.classList[1].toLowerCase();
-    console.log(`Loading questions for: ${subject}`); // Debugging
-    quizContainers.style.display = "none";
-    quizContainer.style.display = "block";
-
-    loadQuestions(subject);
+    quizContainersEl.style.display = "none";
+    quizContainerEl.style.display = "block";
+    loadQuestions(button.classList[1].toLowerCase());
   });
 });
 
-// Load questions from JSON
-function loadQuestions(subject) {
-  fetch(`questions-${subject}.json`)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Failed to load ${subject} questions`);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      console.log("Loaded questions:", data); // Debugging
-      if (!Array.isArray(data) || data.length === 0) {
-        throw new Error("No questions found in JSON");
-      }
-
-      questions = data;
-      currentQuestionIndex = 0;
-      score = 0;
-      showQuestion();
-    })
-    .catch((error) => {
-      console.error("Error loading questions:", error);
-      alert("Error loading questions! Check console.");
-    });
+async function loadQuestions(subject) {
+  try {
+    const response = await fetch(`questions-${subject}.json`);
+    if (!response.ok) {
+      throw new Error("Failed to load questions");
+    }
+    const data = await response.json();
+    if (!Array.isArray(data) || data.length === 0) {
+      alert("No questions found!");
+      return;
+    }
+    questions = data;
+    currentQuestionIndex = 0;
+    score = 0;
+    showQuestion();
+  } catch (error) {
+    alert("Error loading questions!");
+  }
 }
 
-// Show a question
 function showQuestion() {
   resetState();
-
   if (currentQuestionIndex >= questions.length) {
-    console.log("No more questions, showing results.");
     showResults();
     return;
   }
-
   let currentQuestion = questions[currentQuestionIndex];
-  console.log("Displaying question:", currentQuestion); // Debugging
-
-  questionText.textContent = currentQuestion.question;
-
+  questionTextEl.textContent = currentQuestion.question;
   currentQuestion.answers.forEach((answer) => {
     const answerItem = document.createElement("div");
     answerItem.className = "answer-item";
@@ -77,51 +59,34 @@ function showQuestion() {
         ${answer.text}
       </label>
     `;
-
     answerItem.onclick = () => {
       document
         .querySelectorAll(".answer-item")
         .forEach((el) => el.classList.remove("selected"));
       answerItem.classList.add("selected");
-      nextBtn.style.display = "block";
     };
-
-    answersContainer.appendChild(answerItem);
+    answersContainerEl.appendChild(answerItem);
   });
 }
 
-// Reset previous question
 function resetState() {
-  answersContainer.innerHTML = "";
-  nextBtn.style.display = "none";
+  answersContainerEl.innerHTML = "";
 }
 
-// Move to next question
-nextBtn.onclick = () => {
+nextBtnEl.addEventListener("click", () => {
   const selectedAnswer = document.querySelector(
     "input[name='question']:checked"
   );
-
-  if (!selectedAnswer) {
-    console.log("No answer selected, waiting...");
-    return;
-  }
-
-  if (selectedAnswer.value === "true") {
-    score++;
-  }
-
+  if (!selectedAnswer) return;
+  if (selectedAnswer.value === "true") score++;
   currentQuestionIndex++;
-
   showQuestion();
-};
+});
 
-// Show final results
 function showResults() {
-  quizContainer.style.display = "none";
-  resultContainer.style.display = "block";
-
-  resultMessage.textContent =
+  quizContainerEl.style.display = "none";
+  resultContainerEl.style.display = "block";
+  resultMessageEl.textContent =
     score >= questions.length / 2
       ? `🎉 Congratulations! You scored ${score} out of ${questions.length}`
       : `❌ Try again! You scored ${score} out of ${questions.length}`;
