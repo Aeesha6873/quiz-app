@@ -105,7 +105,7 @@ h1 span {
 .answer-item:hover,
 .answer-item.selected {
   background: #4b4e6d;
-  border-color: #a855f7;
+  border-color: #00d4ff;
 }
 
 .answer-label {
